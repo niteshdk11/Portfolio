@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useFrame } from "@react-three/fiber";
-import { Text } from "@react-three/drei";
+import { Text, RoundedBox } from "@react-three/drei";
 import { useBox } from "@react-three/cannon";
 import { useApp } from "../../Context/context.jsx";
 
@@ -53,13 +53,15 @@ export function Box({ position, args = [0.5, 0.5, 0.5], skill }) {
   };
 
   return (
-    <mesh
+    <RoundedBox
       ref={ref}
+      args={adjustedArgs}
+      radius={0.1}
+      smoothness={4}
       onPointerOver={() => setHovered(true)}
       onPointerOut={() => setHovered(false)}
       onClick={handlePointerDown}
     >
-      <boxGeometry args={adjustedArgs} />
       <meshStandardMaterial
         color={hovered ? "#ff9f9f" : skill.color}
         metalness={0.9}
@@ -79,6 +81,6 @@ export function Box({ position, args = [0.5, 0.5, 0.5], skill }) {
           {skill.name}
         </Text>
       ))}
-    </mesh>
+    </RoundedBox>
   );
 }

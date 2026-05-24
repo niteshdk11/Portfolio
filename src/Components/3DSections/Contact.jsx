@@ -37,7 +37,7 @@ const Contact = () => {
         scale={isMobile ? 0.18 : 0.25}
         rotation-y={1.25 * Math.PI}
         position-x={isMobile ? 0.1 : 0.5}
-        position-y={isMobile ? 0.5 : 0.25}
+        position-y={isMobile ? 0.5 : 0.3}
         position-z={isMobile ? 2.7 : -0.5}
       />
 

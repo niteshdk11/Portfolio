@@ -5,8 +5,8 @@ import { Resume } from "./Resume";
 export function House2(props) {
   const { nodes, materials } = useGLTF("/models/house2.glb");
   const [laptopTexture, monitorTexture] = useTexture([
-    "Textures/laptop-Texture.png",
     "Textures/monitro-2.png",
+    "Textures/laptop-Texture.png",
   ]);
 
   return (

@@ -24,8 +24,8 @@ const Home = () => {
             {config.name}
           </span>
         </h1>
-        <p className="mt-6 text-xl text-gray-800 w-[90%] sm:text-white/90 sm:text-lg leading-relaxed">
-          Full Stack Developer crafting beautiful, performant web experiences with modern technologies.
+        <p className="mt-6 text-2xl text-gray-800 w-[90%] sm:text-white/90 sm:text-xl leading-relaxed">
+          Developer crafting beautiful, performant web experiences <br />   with modern <span className="text-orange-500 bg-white/90 p-1 rounded-full my-1">technologies</span>.
         </p>
         <div className="mt-8 flex flex-wrap gap-4">
           <a

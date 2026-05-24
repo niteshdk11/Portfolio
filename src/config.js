@@ -1,6 +1,6 @@
 export const config = {
   sections: ["Home", "Skills", "Projects", "Contact"],
-  loadingScreen: "NK",
+  loadingScreen: "Nitesh Kushwaha",
   name: "Nitesh",
 
   skills: [
@@ -25,35 +25,30 @@ export const config = {
   socialLinks: {
     mail: "niteshdk11@gmail.com",
     whatsapp: "https://wa.me/+919403080767",
-    github: "https://github.com/nitesh11-dk", 
-    linkedin: "https://www.linkedin.com/in/nitesh-dk/",
+    github: "https://github.com/niteshdk11", 
+    linkedin: "https://www.linkedin.com/in/niteshdk11/",
     discord: "https://discord.gg/yourdiscord"
   },
   resume: "https://drive.google.com/file/d/1xKIlWUUvlDMo4Dj9vs29O1_2L69P10Tp/view",
+  moreProjectsLink: "https://www.niteshkushwaha.in/projects",
   projects: [
     {
-      name: "Algo Viz",
-      description: "A web-based platform that visualizes data structures and algorithms through real-time animations.",
-      image: "projects/project1.png",
-      link: "https://algo-viz-seven.vercel.app/",
+      name: "Outreach Labs – InstaReach",
+      description: "A focused software landing page created to promote InstaReach, featuring strong conversion-oriented sections, product highlights, and a clean startup-style design.",
+      image: "/project/proj1.png",
+      link: "https://www.outreachlabs.in/instareach",
     },
     {
-      name: "Tech-Bazaar",
-      description: "A microservices-based e-commerce electronics platform with advanced search, filtering, and Razorpay payment integration.",
-      image: "projects/project2.png",
-      link: "https://ecommerce-client-git-main-nitesh-dks-projects.vercel.app/",
+      name: "9SMM",
+      description: "A social media marketplace SaaS platform that enables users to manage and purchase digital engagement services through a streamlined dashboard and management system.",
+      image: "/project/proj2.png",
+      link: "https://9smm.in/",
     },
     {
-      name: "QuickCart",
-      description: " Browse, search, filter, and manage products and cart by category.",
-      image: "projects/project3.png",
-      link: "https://crud-products-c5g7d464q-nitesh-dks-projects.vercel.app/",
+      name: "Tisorah Box",
+      description: "A premium e-commerce platform designed for curated gift boxes and lifestyle products, focused on elegant browsing, smooth checkout experiences, and visually rich product presentation.",
+      image: "/project/proj3.1.png",
+      link: "https://www.tisorahbox.com/",
     },
-    // {
-    //   name: "3D Portfolio",
-    //   description: "Learn how to build a 3D portfolio",
-    //   image: "projects/project4.jpg",
-    //   link: "https://www.youtube.com/watch?v=pGMKIyALcK0",
-    // },
   ],
 };
