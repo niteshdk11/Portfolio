@@ -13,26 +13,35 @@ const Home = () => {
 
   return (
     <div
-      className={`h-screen text-white py-24 px-4 sm:flex sm:flex-col sm:px-10 sm:justify-center relative sm:-top-20 transition-opacity duration-500 ease-in-out ${
-        offset >= 0.04 ? "opacity-0" : "opacity-100"
+      className={`h-screen text-white py-24 px-4 sm:flex sm:flex-col sm:px-10 sm:justify-center relative sm:-top-20 transition-all duration-700 ease-in-out ${
+        offset >= 0.04 ? "opacity-0 translate-y-10" : "opacity-100 translate-y-0"
       }`}
     >
-      <h1 className="poppins block text-[44px] leading-none text-zinc-800 font-medium sm:text-white sm:text-7xl">
-        Hi, my
-        <span className="block">
-          name is
-          <span className="text-blue-600 sm:text-blue-100"> {config.name}</span>
-        </span>
-      </h1>
-      <p className="mt-3 text-lg text-gray-800 w-[90%] sm:text-white sm:text-md">
-        I'm a Full Stack Developer passionate about web development.
-      </p>
-      <a
-        href="#contact"
-        className="mt-3 inline-block px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-3xl transition duration-300 ease-in-out transform hover:scale-105 w-fit"
-      >
-        Get in Touch
-      </a>
+      <div className="max-w-4xl">
+        <h1 className="poppins block text-[44px] leading-none text-zinc-800 font-bold sm:text-white sm:text-8xl tracking-tight">
+          Hi, I'm
+          <span className="block mt-2 bg-gradient-to-r from-orange-400 via-pink-500 to-purple-600 bg-clip-text text-transparent">
+            {config.name}
+          </span>
+        </h1>
+        <p className="mt-6 text-xl text-gray-800 w-[90%] sm:text-white/90 sm:text-lg leading-relaxed">
+          Full Stack Developer crafting beautiful, performant web experiences with modern technologies.
+        </p>
+        <div className="mt-8 flex flex-wrap gap-4">
+          <a
+            href="#contact"
+            className="inline-block px-8 py-3 bg-gradient-to-r from-orange-500 to-pink-600 hover:from-orange-600 hover:to-pink-700 text-white font-semibold rounded-full transition-all duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg hover:shadow-orange-500/30"
+          >
+            Get in Touch
+          </a>
+          <a
+            href="#projects"
+            className="inline-block px-8 py-3 border-2 border-white/30 hover:border-white/60 text-white font-semibold rounded-full transition-all duration-300 ease-in-out hover:bg-white/10 backdrop-blur-sm"
+          >
+            View Projects
+          </a>
+        </div>
+      </div>
     </div>
   );
 };

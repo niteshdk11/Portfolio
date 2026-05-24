@@ -3,6 +3,7 @@ import {
   Environment,
   OrbitControls,
   useScroll,
+  useTexture,
 } from "@react-three/drei";
 import { Avatar } from "./3D/Avatar";
 import { useEffect, useRef } from "react";
@@ -24,6 +25,14 @@ const Experience = () => {
   const { isMobile } = useMobile();
   const { SECTIONS_DISTANCE, setCurrentSection } = useApp();
   const { camera } = useThree();
+  const brickTexture = useTexture("/Textures/herringbone_brick_03_diff_4k.jpg");
+  const brickDisp = useTexture("/Textures/herringbone_brick_03_disp_4k.png");
+  brickTexture.wrapS = THREE.RepeatWrapping;
+  brickTexture.wrapT = THREE.RepeatWrapping;
+  brickTexture.repeat.set(20, 20);
+  brickDisp.wrapS = THREE.RepeatWrapping;
+  brickDisp.wrapT = THREE.RepeatWrapping;
+  brickDisp.repeat.set(20, 20);
 
   function updateCameraPosition() {
     if (isMobile) {
@@ -108,19 +117,18 @@ const Experience = () => {
 
   return (
     <group className="mainContainer" position={[0.6, 0, 0]}>
-      <Environment preset="sunset" />
+      <Environment preset="warehouse" background={false} />
       <Avatar />
       {/* <OrbitControls /
       > */}
       <ambientLight intensity={0.3} />
-      <mesh position-y={-0.001} rotation-x={-Math.PI / 2}>
+      <mesh position-y={0.08} rotation-x={-Math.PI / 2}>
         <planeGeometry args={[100, 100]} />
-        <MeshReflectorMaterial
-          color="#171720"
-          resolution={1024}
-          mixStrength={12}
-          roughness={0.6}
-        />
+        <meshStandardMaterial map={brickTexture} displacementMap={brickDisp} displacementScale={0.1} />
+      </mesh>
+      <mesh scale={300}>
+        <sphereGeometry args={[1, 32, 32]} />
+        <meshStandardMaterial map={brickTexture} displacementMap={brickDisp} displacementScale={0.1} side={THREE.BackSide} />
       </mesh>
 
       <ContactShadows opacity={0.5} scale={[30, 30]} color="#9c8e66" />
