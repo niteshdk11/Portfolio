@@ -1,5 +1,6 @@
-import React from "react";
-import { useGLTF, useTexture } from "@react-three/drei";
+import React, { useState } from "react";
+import { useGLTF, useTexture, Html, useScroll } from "@react-three/drei";
+import { useFrame } from "@react-three/fiber";
 import { Resume } from "./Resume";
 
 export function House2(props) {
@@ -8,6 +9,19 @@ export function House2(props) {
     "Textures/monitro-2.png",
     "Textures/laptop-Texture.png",
   ]);
+  const [portfolioHovered, setPortfolioHovered] = useState(false);
+  const [portfolioOpacity, setPortfolioOpacity] = useState(1);
+  const scrollData = useScroll();
+
+  useFrame((state) => {
+    if (scrollData.offset <= 0) {
+      setPortfolioOpacity(
+        portfolioHovered ? 1 : 0.5 + Math.sin(state.clock.elapsedTime * 2) * 0.15
+      );
+    } else {
+      setPortfolioOpacity(0);
+    }
+  });
 
   return (
     <group {...props} dispose={null}>
@@ -110,9 +124,35 @@ export function House2(props) {
         />
       </group>
 
-      <mesh className="vs-code-screen" position={[-0.52, 1.23, -0.99]}>
+      <mesh
+        className="vs-code-screen"
+        position={[-0.52, 1.23, -0.99]}
+        onPointerEnter={() => {
+          setPortfolioHovered(true);
+          document.body.style.cursor = "pointer";
+        }}
+        onPointerLeave={() => {
+          setPortfolioHovered(false);
+          document.body.style.cursor = "default";
+        }}
+        onClick={() => window.open("https://niteshkushwaha.in", "_blank")}
+      >
         <planeGeometry args={[0.85, 0.58]} />
-        <meshBasicMaterial map={laptopTexture} />
+        <meshBasicMaterial
+          map={laptopTexture}
+          color={portfolioHovered ? "#e0e7ff" : "#ffffff"}
+          transparent
+          opacity={portfolioHovered ? 0.95 : 1}
+        />
+        <Html position={[0.2, 0.2, 0]} transform distanceFactor={2}>
+          <div
+            onClick={() => window.open("https://niteshkushwaha.in", "_blank")}
+            className="bg-black/40 hover:bg-black/90 text-white px-2 py-1 rounded-lg cursor-pointer"
+            style={{ opacity: portfolioOpacity }}
+          >
+            <h1 className="text-xs font-semibold">Portfolio</h1>
+          </div>
+        </Html>
       </mesh>
 
       <mesh

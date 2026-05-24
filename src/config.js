@@ -32,23 +32,26 @@ export const config = {
   resume: "https://drive.google.com/file/d/1xKIlWUUvlDMo4Dj9vs29O1_2L69P10Tp/view",
   moreProjectsLink: "https://www.niteshkushwaha.in/projects",
   projects: [
-    {
-      name: "Outreach Labs – InstaReach",
-      description: "A focused software landing page created to promote InstaReach, featuring strong conversion-oriented sections, product highlights, and a clean startup-style design.",
-      image: "/project/proj1.png",
-      link: "https://www.outreachlabs.in/instareach",
-    },
-    {
-      name: "9SMM",
-      description: "A social media marketplace SaaS platform that enables users to manage and purchase digital engagement services through a streamlined dashboard and management system.",
-      image: "/project/proj2.png",
-      link: "https://9smm.in/",
-    },
-    {
-      name: "Tisorah Box",
-      description: "A premium e-commerce platform designed for curated gift boxes and lifestyle products, focused on elegant browsing, smooth checkout experiences, and visually rich product presentation.",
-      image: "/project/proj3.1.png",
-      link: "https://www.tisorahbox.com/",
-    },
+   {
+  name: "SPYLT Landing Page",
+  description:
+    "A high-converting product landing page built for SPYLT, showcasing its unique protein + caffeine beverage through bold typography, engaging visuals, smooth animations, and conversion-focused sections.",
+  image: "/project/spylt.png", // update with your actual image path
+  link: "https://spylt-opal.vercel.app/",
+},
+{
+  name: "Outreach Labs – InstaReach",
+  description:
+    "A focused software landing page created to promote InstaReach, featuring strong conversion-oriented sections, product highlights, and a clean startup-style design.",
+  image: "/project/proj1.png",
+  link: "https://www.outreachlabs.in/instareach",
+},
+{
+  name: "Tisorah Box",
+  description:
+    "A premium e-commerce platform designed for curated gift boxes and lifestyle products, focused on elegant browsing, smooth checkout experiences, and visually rich product presentation.",
+  image: "/project/proj3.1.png",
+  link: "https://www.tisorahbox.com/",
+},
   ],
 };
