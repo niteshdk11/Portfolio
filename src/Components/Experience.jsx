@@ -107,7 +107,7 @@ const Experience = () => {
     sectionContainer.current.position.z = THREE.MathUtils.lerp(
       sectionContainer.current.position.z,
       -scrollData.offset * SECTIONS_DISTANCE * (scrollData.pages - 1),
-      1
+      0.1
     );
     setCurrentSection(
       config.sections[Math.floor(scrollData.offset * (scrollData.pages - 1))]
