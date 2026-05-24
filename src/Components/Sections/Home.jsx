@@ -27,7 +27,7 @@ const Home = () => {
         <p className="mt-6 text-2xl text-gray-800 w-[90%] sm:text-white/90 sm:text-xl leading-relaxed">
           Developer crafting beautiful, performant web experiences <br />   with modern <span className="text-orange-500 bg-white/90 p-1 rounded-full my-1">technologies</span>.
         </p>
-        <div className="mt-8 flex flex-wrap gap-4">
+        <div className="hidden sm:flex mt-8 flex flex-wrap gap-4">
           <a
             href="#contact"
             className="inline-block px-8 py-3 bg-gradient-to-r from-orange-500 to-pink-600 hover:from-orange-600 hover:to-pink-700 text-white font-semibold rounded-full transition-all duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg hover:shadow-orange-500/30"

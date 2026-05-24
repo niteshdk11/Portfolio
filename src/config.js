@@ -1,6 +1,6 @@
 export const config = {
   sections: ["Home", "Skills", "Projects", "Contact"],
-  loadingScreen: "Nitesh Kushwaha",
+  loadingScreen: "NK",
   name: "Nitesh",
 
   skills: [
